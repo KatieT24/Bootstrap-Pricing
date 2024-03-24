@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!--HAD TO COMMENT THIS OUT DUE TO CONFLICTING SYNTAX-->
+    <!--<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"/>!-->
+    <title>Bootstrap/HTML Project: Bootstrap Pricing table</title>
+  </head>
+  <body class="bg-light">
+    <!--working on the Navbar second to see how my page responds-->
+    <!-- matthew is going to review this bug, nav toggle works, not showing -->
+    <!-- bootstrap nav - begin -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> Bootstrap For Dummies - Purchase</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Form.html">Buy Here</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+            <!-- <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li> -->
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- bootstrap nav - end -->
+    <!--creating a pricing table and hopefully it works-->
+    <div
+      class="container"
+      style="border: 3px solid rgb(133, 31, 31); text-align: center"
+    >
+      <h1 class="display-6">Bootstrap Pricing Table</h1>
+      <p class="lead" style="text-align: center">
+        This is where my Pricing table is: Bootstrap Pricing
+      </p>
+    </div>
+    <!--Creating another container for the pricings-->
+    <!--i tried to add a border for all the text in the card container
+    but unfortunately it never looked pretty.-->
+    <div class="container text-center py-5">
+      <!--I tried to follow the three rules of bootstrap grid: 
+        Every Row is only used to contain columns, columns are children of Rows, 
+        and rows must be in containers.-->
+      <div class="row row-col-1 row-cols-md-3">
+        <div class="col mb-3">
+          <!--It took a few tries to get the card right, but i was pleased how it came out.!-->
+          <div class="card shadow-md">
+            <div class="card-header">
+              <h4>Basic Package</h4>
+            </div>
+            <div class="card-body">
+              <!--learning about class for bootstrap is a little bit easier than CSS as styling is made in the 
+                                first pages and not needing another 'source' as the source is already on Bootstrap. -->
+              <!--learning about messing with text in bootstrap is tricky if you don't know what  you are doing.-->
+              <h1 class="my-0 font-weight-bold">
+                0.99<medium class="text-muted" style="font-size: 25px"
+                  >/mo</medium
+                >
+              </h1>
+              <ul class="list-unstyled mt-2 mb-1">
+                <!--Even though this is a project, the pricings has to show what it offers-->
+                <li>10 templates avalible for use</li>
+                <li>1GB of storage</li>
+                <li>Help Center Access</li>
+              </ul>
+              <!--Placing a button here helps with certain links and the like.
+                                     I have copy and pasted them to the other two cards-->
+              <button
+                class="btn btn-outline-primary btn-lg mt-2 mb-1 btn-block"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <!--I copied the previous column to make another card.  !-->
+          <div class="card shadow-lg">
+            <div class="card-header">
+              <h4>Pro Package</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="my-0 font-weight-bold">
+                $19.99<medium class="text-muted" style="font-size: 25px"
+                  >/mo</medium
+                >
+              </h1>
+              <ul class="list-unstyled mt-2 mb-1">
+                <li>20 templates avalible for use</li>
+                <li>5GB of storage</li>
+                <li>Help Center Access</li>
+                <li>Tech Support 24/7</li>
+              </ul>
+              <button
+                class="btn btn-outline-primary btn-lg mt-2 mb-1 btn-block"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--when you run out of room on the previous row, you need to make another row. It took a few tried to figure
+                out where the new row should be-->
+        <div class="row">
+          <div class="col mb-2">
+            <div class="card shadow-md">
+              <div class="card-header">
+                <h4>Premium Package</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="my-0 font-weight-bold">
+                  39.99<medium class="text-muted" style="font-size: 25px"
+                    >/mo</medium
+                  >
+                </h1>
+                <ul class="list-unstyled mt-2 mb-1">
+                  <li>all Templates Avalible</li>
+                  <li>10GB of storage</li>
+                  <li>Help Center Access</li>
+                  <li>Tech Support 24/7</li>
+                  <li>Career Oppertunities</li>
+                </ul>
+                <button
+                  class="btn btn-outline-primary btn-lg mt-2 mb-1 btn-block"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- custom table - begin -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Basic</th>
+            <th scope="col">Pro</th>
+            <th scope="col">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>10 templates</td>
+            <td>20 templates</td>
+            <td>All templates</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>1GB Storage</td>
+            <td>5GB Storage</td>
+            <td>10GB Storage</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Help Center Access</td>
+            <td>Tech Support 24/7 + Basic</td>
+            <td>Career Opportunities + Pro</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- custom table - end -->
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

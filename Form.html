@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS  Library HERE!-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <title>Bootstrap for Dummies 2</title>
+  </head>
+  <body class="bg-light" style="min-height: 8000px">
+    <!-- bootstrap nav - begin -->
+    <nav id="specialnav" class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> Bootstrap For Dummies - Purchase</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Form.html">Buy Here</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+            <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- bootstrap nav - end -->
+
+    <!-- <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-lg">
+          <a href="#intro" class="Navbar-brand">
+              <span class="font-weight-bold text secondary" >
+                  Bootstrap For Dummies - Purchase
+              </span>
+          </a>
+          workingon the toggle button was really tricky to 
+          make it responsive.
+          <button class="navbar-toggler" type="button" 
+          " data-bs-target="#main-nav" aria-controls="main-nav"
+          aria-expanded="false" aria-label="toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse 
+  justify-content-end align-center" 
+  id="main-nav">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./Form.html">Buy Here</a>
+      </li>
+  </ul>
+
+  </div>
+
+
+
+      </div>
+  </nav> -->
+    <div class="container">
+      <div class="py-4 text-center">
+        <!--I'm till trying to fugure out how to use smaller adresses for images, but this works for now too.-->
+        <img
+          class="mb-3 d-block mx-auto"
+          src="data:image/jpeg;base64,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"
+          alt="bootstrap logo"
+          height="75px"
+          width="72px"
+        />
+        <!--With the above portion, i had to work on playing around
+        with the margin for the image. this is so that it wouldn't interfere with the text below.
+       -->
+        <h2>Checkout form For Bootstrap pricing</h2>
+        <p class="lead">Below is my form that is created out of bootstrap!</p>
+      </div>
+    </div>
+    <div class="container">
+      <h4 class="mb-2">Billing Adress</h4>
+      <form novalidate>
+        <div class="row g-4">
+          <div class="col-sm-6">
+            <label for="firstname" class="form-label"> First Name</label>
+            <!--Form control will help with the styling that I want-->
+            <input
+              id="firstname"
+              type="text"
+              class="form-control"
+              placeholder="John"
+              required
+            />
+            <!--This particular class is interesting because
+              it will not let anyome submit without a name-->
+            <div class="invalid-feedback">Valid First Name is Required</div>
+          </div>
+          <div class="col-sm-6">
+            <label for="Last Name" class="form-label"> Last Name</label>
+            <input
+              id="Last Name"
+              type="text"
+              class="form-control"
+              placeholder="Doe"
+              required
+            />
+            <div class="invalid-feedback">Valid Last Name is Required</div>
+          </div>
+          <div class="col-12 mt-3">
+            <label for="email" class="form-label"> Email</label>
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input
+                id="email"
+                type="text"
+                class="form-control"
+                placeholder="name@.com"
+                required
+              />
+              <div class="invalid-feedback">Valid email is Required</div>
+            </div>
+          </div>
+          <!--this div is very different from the prvious ones!
+                    I am going to use a drop down-->
+          <div class="col-md-6 mt-3">
+            <!--I am not going to list all fifty states,
+                       but i will put down their capitals, since this is a test site
+                      this is just to show that i understand the concepts of how
+                      bootstrap works.-->
+            <label for="State-Northwest" class="form-label"
+              >State-Northwest</label
+            >
+            <select id="State-Northwest" class="form-control">
+              <option value=" ">Choose...</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Montana">Montana</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Washington">Washington</option>
+              <option value="Wyoming">Wyoming</option>
+              <option value="Utah">Utah</option>
+            </select>
+            <div class="invalid-feedback">Valid State is Required</div>
+            <div class="col-md-6 mt-2">
+              <label for="Capital" class="form-label">Capital</label>
+              <select id="Capital" class="form-control">
+                <option value=" ">Choose...</option>
+                <option value="Boise">Boise</option>
+                <option value="Helena">Helena</option>
+                <option value="Salem">Salem</option>
+                <option value="Washington">Washington</option>
+                <option value="Chyenne">Chyenne</option>
+                <option value="Salt Lake City">Salt Lake City</option>
+              </select>
+              <div class="invalid-feedback">Valid Capital is Required</div>
+            </div>
+            <div class="col-md-6 mt-2">
+              <label for="Zip Code" class="form-label"> Zip Code</label>
+              <div class="input-group">
+                <input
+                  id="Zip Code"
+                  type="number"
+                  class="form-control"
+                  placeholder="12345"
+                  required
+                />
+                <div class="invalid-feedback">Valid Zip Code is Required</div>
+              </div>
+            </div>
+            <!--I used the hr for a break in the code to clean it up a litte,
+                  it took my a few tried to get it right because it was
+                  on the right side of the screen before i figured out that I
+                  had to put it underneadth the first columns I made-->
+            <hr class="my-4" />
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  id="similerAddress"
+                  type="checkbox"
+                  class="form-check-input"
+                />
+                <label for="similerAddress" class="form-check-label"
+                  >Shipping Address is the same as billing address
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  id="saveinformation"
+                  type="checkbox"
+                  class="form-check-input"
+                />
+                <label for="saveinformation" class="form-check-label"
+                  >Save Information</label
+                >
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <h3 class="mb-4">Payments</h3>
+
+            <div class="form-check">
+              <input
+                type="radio"
+                name="paymentmethod"
+                class="form-check-input"
+                unchecked
+                required
+              />
+              <label for="debitcard">Debit Card</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="paymentmethod"
+                class="form-check-input"
+                unchecked
+                required
+              />
+              <label for="creditcard">Credit Card</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="paymentmethod"
+                class="form-check-input"
+                unchecked
+                required
+              />
+              <label for="venmo">Venmo</label>
+            </div>
+            <div class="row my-3 gy-3">
+              <div class="col-md-9">
+                <label for="fullName" class="form-label"> Name on Card </label>
+                <input type="text" id="fullName" class="form-control" />
+                <small class="text-muted">
+                  Full Name as displayed on card.
+                </small>
+                <div class="invalid-feedback">
+                  Name on the card is required.
+                </div>
+              </div>
+              <div class="col-md-9">
+                <label for="Creditcard-number" class="form-label">
+                  Credit Card number
+                </label>
+                <input
+                  type="text"
+                  id="Creditcard-number"
+                  class="form-control"
+                />
+                <div class="invalid-feedback">
+                  Numbers on the card is required.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="expire-date" class="form-label"> Exp. </label>
+                <input type="text" id="expire-date" class="form-control" />
+                <div class="invalid-feedback">Expiration is required.</div>
+              </div>
+              <div class="col-md-3">
+                <label for="CVV-Numbers" class="form-label"> CVV </label>
+                <input type="text" id="CVV-Numbers" class="form-control" />
+                <div class="invalid-feedback">CVV is Required</div>
+              </div>
+            </div>
+
+            <hr my-4 />
+            <button class="btn btn-primary btn-md btn-block">
+              Continue to checkout
+            </button>
+          </div>
+        </div>
+      </form>
+      <!--In the end, trying to organize my code is tricky, but i'm hoping to get better at it! 
+      Even though it looks pretty messy here, the website looks great!-->
+    </div>
+    <!--Javascript may be optional for this but im giving it a shot!-->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
